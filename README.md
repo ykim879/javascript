@@ -1,8 +1,10 @@
-# javascript
 ## Table of Contents
-### Variables
+### Variables And Important Functions
 - Array
 - Object
+### Functional Programming
+- Closure
+- Currying
 ### Function Declaration
 - Function Declaration vs Function Expression
   - Function Expression Example: Callback Function
@@ -14,7 +16,30 @@
 ### Asynchronous Programming
 ### DOM
 ### ES6+ Features
+## Variables And Important Functions
+### OOP
+# 2.1 Functional Programming
 
+## 2.1.1 Closure
+
+- The inner function retains a reference to the variables and scope of its outer function.
+- When the o**uter function finishes executing and returns, the closure is still intact with its captured variables and scope chain.**
+- The closure allows the inner function to access and manipulate the variables of its outer function, even if the outer function's execution has been completed.
+- This behavior is possible because the closure maintains a reference to its outer function's variables and scope chain, preventing them from being garbage collected.
+
+## 2.1.2 **Currying**
+
+Currying is a transformation technique of functions that translates a function
+from callable as f(a, b, c) into callable as f(a)(b)(c). Curried function
+allows **partial application of function**, i.e., it converts a multi-argument function
+into a sequence of single-argument function calls.
+```jsx
+function currySum(a) { return function(b) {
+return function(c) { return a + b + c;
+} }
+}
+console.log(currySum(1)(2)(3)); // 6
+```
 ## OOP
 JavaScript isn’t a class-based object-oriented language, it can certainly act like one.
 ## **Prototype Inheritance**
